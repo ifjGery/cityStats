@@ -1,8 +1,8 @@
 'use strict';
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = require('./cjs/app.min.js');
+  module.exports = require('./commonjs/app.min.js');
 }
 else {
-  module.exports = require('./cjs/app.js');
+  module.exports = require('./commonjs/app.js');
 }

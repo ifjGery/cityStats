@@ -17,7 +17,7 @@
       "packages/**/*.ts",
       "packages/**/*.tsx",
       "./externals.d.ts"
-  ],
+, "packages/app/src/index.js"  ],
   "exclude": [
       "node_modules",
       "**/package/**/*"

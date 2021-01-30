@@ -2,12 +2,13 @@ import React from 'react';
 
 import style from './App.less';
 
-function App() {
+const App = () => {
+  const temp = 1;
   return (
-    <div className={style.app}>
-      <span>Hello there</span>
-    </div>
+    <span className={style.app}>
+      {temp}
+    </span>
   );
-}
+};
 
 export default App;
