@@ -1,6 +1,3 @@
----
-to: packages/ui-components/<%= name %>/rollup.config.js
----
 import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
@@ -28,7 +25,7 @@ export default [
   {
     input,
     output: {
-      file: './pac/commonjs/<%= name %>.js',
+      file: './pac/commonjs/test.js',
       format: 'cjs',
     },
     external,
@@ -45,7 +42,7 @@ export default [
   {
     input,
     output: {
-      file: './pac/commonjs/<%= name %>.min.js',
+      file: './pac/commonjs/test.min.js',
       format: 'cjs',
     },
     external,

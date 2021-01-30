@@ -16,7 +16,7 @@
   "include": [
       "packages/**/*.ts",
       "packages/**/*.tsx",
-      "./external.d.ts"
+      "./externals.d.ts"
   ],
   "exclude": [
       "node_modules",

@@ -5,12 +5,13 @@ import React from 'react';
 
 import style from './<%= h.inflection.camelize(name) %>.less';
 
-const <%= h.inflection.camelize(name, true) %> = () => {
+function <%= h.inflection.camelize(name) %>() {
+  const temp = 1;
   return (
     <span className={style.<%= h.inflection.camelize(name, true) %>}>
-      // TODO: add content
+      {temp}
     </span>
   );
-};
+}
 
-export default <%= h.inflection.camelize(name, true) %>;
+export default <%= h.inflection.camelize(name) %>;
