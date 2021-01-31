@@ -1,6 +1,3 @@
----
-to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/rollup.config.js
----
 import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
@@ -28,9 +25,9 @@ export default [
   {
     input,
     output: {
-      file: './build/cjs/<%= h.changeCase.camelCase(name) %>.js',
+      file: './build/cjs/infoTable.js',
       format: 'cjs',
-      banner: 'require(\'./<%= h.changeCase.camelCase(name) %>.css\');',
+      banner: 'require(\'./infoTable.css\');',
       strict: false,
     },
     external,
@@ -47,9 +44,9 @@ export default [
   {
     input,
     output: {
-      file: './build/cjs/<%= h.changeCase.camelCase(name) %>.min.js',
+      file: './build/cjs/infoTable.min.js',
       format: 'cjs',
-      banner: 'require(\'./<%= h.changeCase.camelCase(name) %>.min.css\');',
+      banner: 'require(\'./infoTable.min.css\');',
       strict: false,
     },
     external,

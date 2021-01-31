@@ -1,11 +1,11 @@
 ---
-to: packages/ui-components/<%= name %>/dist/index.js
+to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/dist/index.js
 ---
 'use strict';
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = require('./cjs/<%= name %>.min.js');
+  module.exports = require('./cjs/<%= h.changeCase.camelCase(name) %>.min.js');
 }
 else {
-  module.exports = require('./cjs/<%= name %>.js');
+  module.exports = require('./cjs/<%= h.changeCase.camelCase(name) %>.js');
 }

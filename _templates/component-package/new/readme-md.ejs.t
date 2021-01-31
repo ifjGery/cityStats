@@ -1,7 +1,7 @@
 ---
-to: packages/ui-components/<%= name %>/README.md
+to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/README.md
 ---
-# Doc for `<%= name %>` component
+# Doc for `<%= h.changeCase.pascalCase(name) %>` component
 
 ## TODO: 
 - add documentation

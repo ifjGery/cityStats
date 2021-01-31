@@ -1,6 +1,6 @@
 ---
-to: packages/ui-components/<%= name %>/src/<%= h.inflection.camelize(name, true) %>.less
+to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/src/<%= h.changeCase.camelCase(name) %>.less
 ---
-.<%= h.inflection.camelize(name, true) %> {
+.<%= h.changeCase.camelCase(name) %> {
   color: black;
 }

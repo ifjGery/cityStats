@@ -1,7 +1,7 @@
 ---
-to: packages/ui-components/<%= name %>/src/index.ts
+to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/src/index.ts
 ---
 
-import <%= h.inflection.camelize(name) %> from './<%= h.inflection.camelize(name) %>';
+import <%= h.changeCase.pascalCase(name) %> from './<%= h.changeCase.pascalCase(name) %>';
 
-export default <%= h.inflection.camelize(name) %>;
+export default <%= h.changeCase.pascalCase(name) %>;

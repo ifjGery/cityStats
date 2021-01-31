@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default function App() : React.FunctionComponent;
+export default function App() : React.FunctionComponentElement<any>;

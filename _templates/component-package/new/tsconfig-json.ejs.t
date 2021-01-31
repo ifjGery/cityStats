@@ -1,5 +1,5 @@
 ---
-to: packages/ui-components/<%= name %>/tsconfig.json
+to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/tsconfig.json
 ---
 {
   "extends": "../../../tsconfig.json"

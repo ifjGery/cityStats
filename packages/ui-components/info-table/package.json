@@ -1,8 +1,5 @@
----
-to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/package.json
----
 {
-    "name": "@ui-component/<%= h.changeCase.paramCase(name) %>",
+    "name": "@ui-component/info-table",
     "version": "1.0.0",
     "description": "TODO change",
     "private": true,
@@ -28,7 +25,7 @@ to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/package.json
     },
     "scripts": {
       "clean": "rm -rf build && mkdir build",
-      "build": "npm run clean && cp src/index.d.ts build && cp dist/index.js build && rollup -c && rm -rf build/cjs/<%= h.changeCase.camelCase(name) %>.less"
+      "build": "npm run clean && cp src/index.d.ts build && cp dist/index.js build && rollup -c && rm -rf build/cjs/infoTable.less"
     },
     "devDependencies": {
       "react-test-renderer": "^17.0.1",

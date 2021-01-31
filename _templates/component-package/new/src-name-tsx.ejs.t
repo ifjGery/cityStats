@@ -1,17 +1,17 @@
 ---
-to: packages/ui-components/<%= name %>/src/<%= h.inflection.camelize(name) %>.tsx
+to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/src/<%= h.changeCase.pascalCase(name) %>.tsx
 ---
 import React from 'react';
 
-import style from './<%= h.inflection.camelize(name, true) %>.less';
+import style from './<%= h.changeCase.camelCase(name) %>.less';
 
-const <%= h.inflection.camelize(name) %> = () => {
+const <%= h.changeCase.camelCase(name) %> = () => {
   const temp = 1;
   return (
-    <span className={style.<%= h.inflection.camelize(name, true) %>}>
+    <span className={style['<%= h.changeCase.paramCase(name) %>']}>
       {temp}
     </span>
   );
 };
 
-export default <%= h.inflection.camelize(name) %>;
+export default <%= h.changeCase.camelCase(name) %>;

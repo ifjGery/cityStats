@@ -1,5 +1,5 @@
 ---
-to: packages/ui-components/<%= name %>/.gitignore
+to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/.gitignore
 ---
 node_modules
 build
