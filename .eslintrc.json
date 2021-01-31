@@ -23,7 +23,7 @@
     "jest"
   ],
   "ignorePatterns": [
-    "**/pac/*",
+    "**/build/*",
     "**/dist/*"
   ],
   "rules": {
@@ -57,7 +57,9 @@
           "**/*.spec.ts", 
           "**/*.spec.tsx",
           "**/*.test.ts", 
-          "**/*.test.tsx"
+          "**/*.test.tsx",
+          "**/rollup.config.js",
+          "**/webpack.config.js"
         ]
       }
     ]

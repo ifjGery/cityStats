@@ -1,4 +1,4 @@
-import postcss from 'rollup-plugin-postcss'
+import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
@@ -17,7 +17,7 @@ const typescriptOptions = {
   jsx: 'react',
   allowSyntheticDefaultImports: true,
   resolveJsonModule: true,
-  moduleResolution: 'node'
+  moduleResolution: 'node',
 };
 
 export default [
@@ -28,15 +28,15 @@ export default [
       file: './build/cjs/app.js',
       format: 'cjs',
       banner: 'require(\'./app.css\')',
-      strict: false
+      strict: false,
     },
     external,
     plugins: [
       postcss({
         extract: true,
-        modules: true
+        modules: true,
       }),
-      typescript(typescriptOptions)
+      typescript(typescriptOptions),
     ],
   },
 
@@ -47,14 +47,14 @@ export default [
       file: './build/cjs/app.min.js',
       format: 'cjs',
       banner: 'require(\'./app.min.css\')',
-      strict: false
+      strict: false,
     },
     external,
     plugins: [
       postcss({
         extract: true,
         modules: true,
-        minimize: true
+        minimize: true,
       }),
       typescript(typescriptOptions),
       terser(),

@@ -1,4 +1,4 @@
-import postcss from 'rollup-plugin-postcss'
+import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
@@ -17,7 +17,7 @@ const typescriptOptions = {
   jsx: 'react',
   allowSyntheticDefaultImports: true,
   resolveJsonModule: true,
-  moduleResolution: 'node'
+  moduleResolution: 'node',
 };
 
 export default [
@@ -34,7 +34,7 @@ export default [
     plugins: [
       postcss({
         extract: true,
-        modules: true
+        modules: true,
       }),
       typescript(typescriptOptions),
     ],
@@ -54,7 +54,7 @@ export default [
       postcss({
         extract: true,
         modules: true,
-        minimize: true
+        minimize: true,
       }),
       typescript(typescriptOptions),
       terser(),
