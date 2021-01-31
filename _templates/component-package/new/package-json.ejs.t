@@ -14,15 +14,21 @@ to: packages/ui-components/<%= name %>/package.json
     "bugs": {
       "url": "https://github.com/ifjGery/cityStats/issues"
     },
-    "main": "pac/index.js",
-    "types": "pac/index.d.ts",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "files": [
+      "build/cjs/*.css",
+      "build/cjs/*.js",
+      "build/index.d.ts",
+      "build/index.js"
+    ],
     "dependencies": {
       "react": "^17.0.1",
       "react-dom": "^17.0.1"
     },
     "scripts": {
-      "clean": "rm -rf pac && mkdir pac",
-      "build": "npm run clean && cp src/index.d.ts pac && cp dist/index.js pac && rollup -c && rm -rf pac/cjs/<%= h.inflection.camelize(name) %>.less"
+      "clean": "rm -rf build && mkdir build",
+      "build": "npm run clean && cp src/index.d.ts build && cp dist/index.js build && rollup -c && rm -rf build/cjs/<%= h.inflection.camelize(name) %>.less"
     },
     "devDependencies": {
       "react-test-renderer": "^17.0.1",

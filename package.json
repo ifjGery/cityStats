@@ -8,7 +8,8 @@
     "clean": "lerna run clean",
     "build": "lerna run build",
     "test": "lerna run test",
-    "start": "lerna run build && lerna run start"
+    "start": "lerna run build && lerna run start",
+    "create:ui-package": "hygen component-package new"
   },
   "repository": {
     "type": "git",

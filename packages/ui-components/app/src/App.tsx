@@ -1,11 +1,14 @@
 import React from 'react';
 
-import style from './App.less';
+import style from './app.less';
 
-const App = () => (
-  <span className={style.app}>
-    <h1>Hello world</h1>
-  </span>
-);
+const App = () => {
+  const temp = 1;
+  return (
+    <span className={style.app}>
+      {temp}
+    </span>
+  );
+};
 
 export default App;

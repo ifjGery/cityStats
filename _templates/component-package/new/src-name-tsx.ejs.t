@@ -3,7 +3,7 @@ to: packages/ui-components/<%= name %>/src/<%= h.inflection.camelize(name) %>.ts
 ---
 import React from 'react';
 
-import style from './<%= h.inflection.camelize(name) %>.less';
+import style from './<%= h.inflection.camelize(name, true) %>.less';
 
 const <%= h.inflection.camelize(name) %> = () => {
   const temp = 1;
