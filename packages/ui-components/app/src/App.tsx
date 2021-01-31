@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 import style from './app.less';
 
@@ -7,6 +8,7 @@ const App = () => {
   return (
     <span className={style.app}>
       {temp}
+      <Button />
     </span>
   );
 };

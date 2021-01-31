@@ -30,6 +30,8 @@ export default [
     output: {
       file: './build/cjs/<%= name %>.js',
       format: 'cjs',
+      banner: 'require(\'<%= h.inflection.camelize(name, true) %>.css\');',
+      strict: false,
     },
     external,
     plugins: [
@@ -47,6 +49,8 @@ export default [
     output: {
       file: './build/cjs/<%= name %>.min.js',
       format: 'cjs',
+      banner: 'require(\'<%= h.inflection.camelize(name, true) %>.min.css\');',
+      strict: false,
     },
     external,
     plugins: [

@@ -11,7 +11,7 @@ const external = [
 const input = './src/index.ts';
 
 const typescriptOptions = {
-  removeComments: true,
+  removeComments: false,
   module: 'es6',
   target: 'es5',
   jsx: 'react',
@@ -27,6 +27,8 @@ export default [
     output: {
       file: './build/cjs/app.js',
       format: 'cjs',
+      banner: 'require(\'./app.css\')',
+      strict: false
     },
     external,
     plugins: [
@@ -34,7 +36,7 @@ export default [
         extract: true,
         modules: true
       }),
-      typescript(typescriptOptions),
+      typescript(typescriptOptions)
     ],
   },
 
@@ -44,6 +46,8 @@ export default [
     output: {
       file: './build/cjs/app.min.js',
       format: 'cjs',
+      banner: 'require(\'./app.min.css\')',
+      strict: false
     },
     external,
     plugins: [
