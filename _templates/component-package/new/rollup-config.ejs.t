@@ -28,7 +28,7 @@ export default [
   {
     input,
     output: {
-      file: './pac/commonjs/<%= name %>.js',
+      file: './pac/cjs/<%= name %>.js',
       format: 'cjs',
     },
     external,
@@ -45,7 +45,7 @@ export default [
   {
     input,
     output: {
-      file: './pac/commonjs/<%= name %>.min.js',
+      file: './pac/cjs/<%= name %>.min.js',
       format: 'cjs',
     },
     external,

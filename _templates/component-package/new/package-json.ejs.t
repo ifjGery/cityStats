@@ -22,7 +22,7 @@ to: packages/ui-components/<%= name %>/package.json
     },
     "scripts": {
       "clean": "rm -rf pac && mkdir pac",
-      "build": "npm run clean && cp src/index.d.ts pac && cp dist/index.js pac && rollup -c && rm -rf pac/commonjs/<%= h.inflection.camelize(name) %>.less"
+      "build": "npm run clean && cp src/index.d.ts pac && cp dist/index.js pac && rollup -c && rm -rf pac/cjs/<%= h.inflection.camelize(name) %>.less"
     },
     "devDependencies": {
       "react-test-renderer": "^17.0.1",

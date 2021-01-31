@@ -13,9 +13,18 @@
   },
   "main": "pac/index.js",
   "types": "pac/index.d.ts",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve"
+  },
   "dependencies": {
     "@ui-component/app": "^1.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
