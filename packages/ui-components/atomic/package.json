@@ -1,5 +1,5 @@
 {
-  "name": "@ui-component/info-table",
+  "name": "@ui-component/atomic",
   "version": "1.0.0",
   "description": "TODO change",
   "private": true,
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "clean": "rm -rf build && mkdir build",
-    "build": "npm run clean && cp src/index.d.ts build && cp dist/index.js build && rollup -c && rm -rf build/cjs/infoTable.less"
+    "build": "npm run clean && cp src/index.d.ts build && cp dist/index.js build && rollup -c && rm -rf build/cjs/atomic.less"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.1.1",

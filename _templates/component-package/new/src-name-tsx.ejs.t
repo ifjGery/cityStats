@@ -5,7 +5,7 @@ import React from 'react';
 
 import style from './<%= h.changeCase.camelCase(name) %>.less';
 
-const <%= h.changeCase.camelCase(name) %> = () => {
+const <%= h.changeCase.pascalCase(name) %> = () => {
   const temp = 1;
   return (
     <span className={style['<%= h.changeCase.paramCase(name) %>']}>
@@ -14,4 +14,4 @@ const <%= h.changeCase.camelCase(name) %> = () => {
   );
 };
 
-export default <%= h.changeCase.camelCase(name) %>;
+export default <%= h.changeCase.pascalCase(name) %>;
