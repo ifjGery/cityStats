@@ -11,5 +11,7 @@
   "bugs": {
     "url": "https://github.com/ifjGery/cityStats/issues"
   },
-  "main": "src/base.less"
+  "files": [
+    "*.less"
+  ]
 }

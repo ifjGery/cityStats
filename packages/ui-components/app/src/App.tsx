@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from './Button';
-import Table from '@ui-component/info-table';
+import { Icon } from '@ui-component/atomic';
 
 import style from './app.less';
 
@@ -9,8 +8,7 @@ const App = () => {
   return (
     <span className={style.app}>
       {temp}
-      <Button />
-      <Table />
+      <Icon type="info" />
     </span>
   );
 };

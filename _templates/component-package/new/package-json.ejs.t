@@ -23,6 +23,8 @@ to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/package.json
       "build/index.js"
     ],
     "dependencies": {
+      "postcss-import": "^14.0.0",
+      "prop-types": "^15.7.2",
       "react": "^17.0.1",
       "react-dom": "^17.0.1"
     },
@@ -34,6 +36,7 @@ to: packages/ui-components/<%= h.changeCase.paramCase(name) %>/package.json
       "react-test-renderer": "^17.0.1",
       "rollup-plugin-postcss": "^4.0.0",
       "rollup-plugin-terser": "^7.0.2",
-      "@rollup/plugin-typescript": "^8.1.1"
+      "@rollup/plugin-typescript": "^8.1.1",
+      "@types/prop-types": "^15.7.3",
     }
 }

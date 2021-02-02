@@ -1,3 +1,7 @@
-import Atomic from './Atomic';
+import Action from './action';
+import Icon from './icon';
 
-export default Atomic;
+export {
+  Action,
+  Icon,
+};

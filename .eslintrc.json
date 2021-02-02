@@ -27,6 +27,7 @@
     "**/dist/*"
   ],
   "rules": {
+    "react/prop-types": "off", /* Heavy TODO, how to make this work with ts without manual labor? */
     "react/jsx-filename-extension": [
       2,
       {

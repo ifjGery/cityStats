@@ -1,6 +1,8 @@
+/* eslint-disable no-console */
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
+import { resolve } from 'path';
 
 const pac = require('./package.json');
 
@@ -35,6 +37,11 @@ export default [
       postcss({
         extract: true,
         modules: true,
+        use: {
+          less: {
+            paths: [resolve(__dirname, 'node_modules')],
+          },
+        },
       }),
       typescript(typescriptOptions),
     ],
@@ -55,6 +62,11 @@ export default [
         extract: true,
         modules: true,
         minimize: true,
+        use: {
+          less: {
+            paths: [resolve(__dirname, 'node_modules')],
+          },
+        },
       }),
       typescript(typescriptOptions),
       terser(),

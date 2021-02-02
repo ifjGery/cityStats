@@ -2,6 +2,8 @@ import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
+import postcssImport from 'postcss-import';
+
 const pac = require('./package.json');
 
 const external = [
@@ -35,6 +37,7 @@ export default [
       postcss({
         extract: true,
         modules: true,
+        plugins: [postcssImport()],
       }),
       typescript(typescriptOptions),
     ],
@@ -55,6 +58,7 @@ export default [
         extract: true,
         modules: true,
         minimize: true,
+        plugins: [postcssImport()],
       }),
       typescript(typescriptOptions),
       terser(),
