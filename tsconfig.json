@@ -8,18 +8,20 @@
       "jsx": "react",
       "lib": ["dom", "es2015"],
       "resolveJsonModule": true,
-      "baseUrl": ".",
+      "moduleResolution": "node",
+      "baseUrl": "./",
       "paths": {
-          "*": ["node_modules", "packages"]
+          "*": ["./node_modules/*"],
+          "Component/*": ["./src/components/*"],
+          "Helper/*": ["./src/helper/*"]
       }
   },
   "include": [
-      "packages/**/*.ts",
-      "packages/**/*.tsx",
-      "./externals.d.ts"
-, "packages/app/src/index.js"  ],
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "./declarations.d.ts"
+  ],
   "exclude": [
-      "node_modules",
-      "**/package/**/*"
+      "node_modules"
   ]
 }

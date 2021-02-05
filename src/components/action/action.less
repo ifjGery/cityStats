@@ -1,0 +1,23 @@
+.action {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.text-sidealign {
+  text-align: left;
+}
+
+.floating-icon {
+  position: absolute;
+
+  &-left {
+    &:extend(.floating-icon);
+    left: 0;
+  }
+
+  &-right {
+    &:extend(.floating-icon);
+    right: 0;
+  }
+}

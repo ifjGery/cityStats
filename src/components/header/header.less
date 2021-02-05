@@ -1,0 +1,24 @@
+@import 'Theme/sizes';
+
+.header-background {
+    background-color: gray;
+}
+
+.header {
+    width: @desktop-content-width;
+    font-size: @font-title;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 200px;
+}
+
+@media screen and  (max-width: @desktop-content-width) {
+    .header {
+        background-color: red;
+    }
+}

@@ -1,55 +1,82 @@
 {
-  "name": "citystats",
+  "name": "city-stats",
   "version": "1.0.0",
-  "private": true,
-  "description": "city stats demonstration app",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
-    "clean": "lerna run clean",
-    "build": "lerna run build",
-    "test": "lerna run test",
-    "start": "lerna run build && lerna run start",
-    "create:ui-package": "hygen component-package new",
-    "lint": "eslint -c ./.eslintrc.json packages/**"
+    "prestart": "cp -r src/theme/icomoon/fonts src/public && cp src/theme/icomoon/style.css src/public/iconpack.css",
+    "start": "webpack serve --env NODE_ENV=development",
+    "test": "jest",
+    "lint": ""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ifjGery/cityStats.git"
-  },
-  "author": "Gergo Szatmari",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ifjGery/cityStats/issues"
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
   },
-  "homepage": "https://github.com/ifjGery/cityStats#readme",
   "devDependencies": {
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-typescript": "^8.1.1",
-    "@types/react": "^17.0.0",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.13",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
     "@types/react-test-renderer": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.14.1",
-    "@typescript-eslint/parser": "^4.14.1",
-    "eslint": "^7.18.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "babel": "^6.23.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-import-resolver-lerna": "^2.0.0",
-    "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.3",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "hygen": "^6.0.4",
-    "identity-obj-proxy": "^3.0.0",
+    "file-loader": "^6.2.0",
     "jest": "^26.6.3",
-    "lerna": "^3.22.1",
-    "postcss": "^8.2.4",
-    "rollup": "^2.38.1",
-    "rollup-plugin-less": "^1.1.3",
-    "rollup-plugin-less-modules": "^0.1.11",
-    "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-terser": "^7.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "mini-css-extract-plugin": "^1.3.5",
+    "react-test-renderer": "^17.0.1",
+    "slash": "^3.0.0",
+    "source-map-support": "^0.5.19",
+    "style-loader": "^2.0.0",
     "ts-jest": "^26.5.0",
-    "typescript": "^4.1.3"
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleNameMapper": {
+      "^Component/(.*)": "<rootDir>/src/components/$1",
+      "^Helper/(.*)": "<rootDir>/src/helper/$1"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
