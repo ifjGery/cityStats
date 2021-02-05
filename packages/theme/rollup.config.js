@@ -46,7 +46,9 @@ export default [
             paths: [resolve(__dirname, 'node_modules')],
           },
         },
-        plugins: [postcssImport()],
+        plugins: [postcssImport({
+          path: ['npm://theme/src'],
+        })],
       }),
       typescript(typescriptOptions),
     ],
@@ -73,7 +75,9 @@ export default [
             paths: [resolve(__dirname, 'node_modules')],
           },
         },
-        plugins: [postcssImport()],
+        plugins: [postcssImport({
+          path: ['npm://theme/src'],
+        })],
       }),
       typescript(typescriptOptions),
       terser(),
