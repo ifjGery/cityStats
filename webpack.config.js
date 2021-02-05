@@ -80,7 +80,7 @@ module.exports = env => {
     devServer: {
       contentBase: path.join(__dirname, 'src/public/'),
       port: 3030,
-      publicPath: 'http://localhost:3030/dist/',
+      publicPath: 'http://localhost:3000/dist/',
       hotOnly: true,
       historyApiFallback: true
     },
